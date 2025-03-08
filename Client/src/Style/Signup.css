@@ -1,0 +1,18 @@
+body {
+   background-position: center;
+}
+
+.signup-card {
+      position: relative;
+      bottom: 730px;
+      height: 450px;
+      backdrop-filter: blur(5px) saturate(150%);
+      -webkit-backdrop-filter: blur(5px) saturate(150%);
+      background-color: rgba(74, 74, 74, 0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+  
+  
+  
