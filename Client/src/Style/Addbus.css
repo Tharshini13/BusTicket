@@ -1,0 +1,44 @@
+#addbus_bg{
+    height: 640px;
+    width: 100%;
+    position: relative;
+    bottom: 18px;
+}
+
+
+#addpara {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 600px;
+    text-align: center;
+    color: white; 
+
+}
+
+body {
+    background-position: center;
+ }
+ 
+ .addbus1-card {
+    position: relative;
+    bottom: 550px;
+    right: 240px;
+    backdrop-filter: blur(5px) saturate(150%);
+   -webkit-backdrop-filter: blur(5px) saturate(150%);
+    background-color: rgba(74, 74, 74, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+ }
+
+ .addbus2-card {
+    position: relative;
+    bottom: 934px;
+    left: 230px;
+    height: 335px;
+    backdrop-filter: blur(5px) saturate(150%);
+    -webkit-backdrop-filter: blur(5px) saturate(150%);
+    background-color: rgba(74, 74, 74, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}

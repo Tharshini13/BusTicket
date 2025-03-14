@@ -2,8 +2,31 @@ import React from 'react'
 import Navbar from './Navbar'
 import "../Style/BookTicket.css"
 import ticket from "../assets/tree.jpg"
+import axios from 'axios'
 
 const BookTicket = () => {
+
+
+
+
+let findBus = ()=>{
+
+  axios.post("http://localhost:8000/bus/findbus")
+  .then(()=>{
+   console.log("Reqsend");
+   
+  })
+  .catch((e)=>{
+
+    console.log("Eror");
+    
+
+  })
+
+
+}
+
+
   return (
     <div>
       <Navbar/>
@@ -26,7 +49,7 @@ const BookTicket = () => {
             </div>
         </div>
         
-        <button className='search'>Search</button>
+        <button className='search' onClick={findBus}>Search</button>
       </div>
 
   )

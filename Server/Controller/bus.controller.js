@@ -37,7 +37,7 @@ module.exports = {
     },
 
 
-    findbus : async (req,res)=>{
+    findbus : async (req, res)=>{
 
         let { from, to, date } = req.body;
 
