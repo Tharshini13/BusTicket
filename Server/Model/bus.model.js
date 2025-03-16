@@ -10,6 +10,9 @@ let mongoose = require("mongoose");
     "date":{
         type:String
     },
+    "time":{
+        type:String
+    },
     "travelsname":{
         type:String
     },

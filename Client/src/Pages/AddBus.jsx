@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Style/AddBus.css"
-import img from "../assets/tree.jpg"
+import img from "../assets/login_bg.jpg"
 import Navbar from '../Components/Navbar'
 import "bootstrap/dist/css/bootstrap.min.css";
 

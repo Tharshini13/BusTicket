@@ -12,14 +12,14 @@ console.log(message.status);
 
 
   return (
-    <div id="nav">
+    <div id="nav" style={{position:"relative",top:"10px"}}>
       <div id="Nav">
         <img id="img_buslogo" src={Buslogo}></img>
         <p id="head">BlueSky Travels</p>
         <Link className="link"  to="/home"><button type="button" class="btn">Home</button></Link>
         <Link className="link" to='/bookticket'><button type="button" class="btn"  >Book Ticket</button></Link>
         <Link className="link" to=''><button type="button" class="btn">Download Ticket</button></Link>
-        <Link className="link" to="/login"><button type="button" class="btn" id="btn">Sign In</button></Link>
+        <Link className="link" to="/login"><button type="button" className="btn btn-primary" id="btn">Sign In</button></Link>
       </div>
 
       <div class="navM">
