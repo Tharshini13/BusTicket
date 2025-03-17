@@ -12,7 +12,7 @@ console.log(message.status);
 
 
   return (
-    <div id="nav" style={{position:"relative",top:"10px"}}>
+    <div id="nav" style={{position:"relative",top:"4px"}}>
       <div id="Nav">
         <img id="img_buslogo" src={Buslogo}></img>
         <p id="head">BlueSky Travels</p>

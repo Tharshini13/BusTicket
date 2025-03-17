@@ -7,8 +7,8 @@ import pillow from "../assets/pillow.png"
 import charge from "../assets/charge.png"
 import { busStore } from '../StateManagement/bus.store';
 
-const Buslist = () => {
 
+const Buslist = () => {
 
 
   return (
@@ -18,15 +18,15 @@ const Buslist = () => {
 
             <h5 class="card-title">SRS Travels</h5>
 
-            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}>07.30<h6>16Mar</h6></h5>
+            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> 07.30<h6>16Mar </h6></h5>
             <hr style={{width:"50px",position:"relative",bottom:"63px",left:"480px"}}></hr>
-            <h6 style={{position:"relative",bottom:"93px",left:"560px"}}>06hrs 1min</h6>
+            <h6 style={{position:"relative",bottom:"93px",left:"560px"}}> 06hrs 1min </h6>
             <hr style={{width:"50px",position:"relative",bottom:"117px",left:"680px"}}></hr>
-            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}>13:40<h6>16Mar</h6></h5>
+            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}> 13:40<h6>16Mar </h6></h5>
 
-            <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}>*4.4</button>
+            <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}> *4.4</button>
 
-            <h5 style={{position:"relative",left:"1250px",bottom:"210px"}}>$1,000</h5>
+            <h5 style={{position:"relative",left:"1250px",bottom:"235px"}}>$1,000</h5>
 
             <h6 style={{position:"relative",bottom:"230px"}}>A/C Sleeper</h6>
 

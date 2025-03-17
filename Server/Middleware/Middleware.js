@@ -4,6 +4,9 @@ function protectedRoute(req, res, next) {
 
     let token = req.cookies?.authToken;
 
+    console.log(req.cookies);
+    
+
     if (!token) {
         return res.status(401).json({ message: "Access Denied. No token provided." });
     }

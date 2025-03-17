@@ -5,13 +5,13 @@ module.exports = {
 
     addbus:(req,res)=>{
 
-        let {from,to,date,travelsname,utilities,type,price} = req.body
+        let {from,to,date,startdate,reachingdate,starttime,reachingtime ,totalhours, travelsname,utilities,type,price} = req.body
 
 
        
 
 
-        busdetailes.create({from:from,to:to,date:date,travelsname:travelsname,utilities:utilities,type:type,price:price})
+        busdetailes.create({from:from,to:to,date:date,startdate:startdate,reachingdate:reachingdate,starttime:starttime,reachingtime:reachingtime,totalhours:totalhours, travelsname:travelsname,utilities:utilities,type:type,price:price})
         .then((d)=>{
 
             res.json({

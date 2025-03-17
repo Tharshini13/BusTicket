@@ -10,7 +10,19 @@ let mongoose = require("mongoose");
     "date":{
         type:String
     },
-    "time":{
+    "starttime":{
+        type:String
+    },
+    "reachingtime":{
+        type:String
+    },
+    "startdate":{
+        type:String
+    },
+    "reachingdate":{
+        type:String
+    },
+    "totalhours":{
         type:String
     },
     "travelsname":{

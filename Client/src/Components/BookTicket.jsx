@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Navbar from './Navbar'
 import "../Style/BookTicket.css"
 import ticket from "../assets/login_bg.jpg"
-import axios from 'axios'
 import { busStore } from '../StateManagement/bus.store'
 import Buslist from './Buslist'
 
