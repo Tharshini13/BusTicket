@@ -13,13 +13,13 @@ let mongoose = require("mongoose");
     "starttime":{
         type:String
     },
-    "reachingtime":{
-        type:String
+    "reachtime":{
+        type:String        
     },
     "startdate":{
         type:String
     },
-    "reachingdate":{
+    "reachdate":{
         type:String
     },
     "totalhours":{
@@ -36,10 +36,10 @@ let mongoose = require("mongoose");
         type:String
     },
     "price":{
-        type:Number
+        type:String
     },
     "rating":{
-        type:Number
+        type:String
     }
 
 })

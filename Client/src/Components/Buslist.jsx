@@ -5,50 +5,68 @@ import bedsheet from "../assets/bed-sheets.png"
 import light from "../assets/light.png"
 import pillow from "../assets/pillow.png"
 import charge from "../assets/charge.png"
-import { busStore } from '../StateManagement/bus.store';
+import { busStore } from "../StateManagement/bus.store"; 
+import { Link } from 'react-router-dom';
 
 
 const Buslist = () => {
 
+  let {findbus,busInfo} = busStore();
 
-  return (
+  let data = busInfo?.busdata || [];
+
+
+
+  return(
+    <div>
+      {data.map((d)=>{
+        return(
+
+
     <div>
         <div class="card">
         <div class="card-body">
 
-            <h5 class="card-title">SRS Travels</h5>
+            <h5 class="card-title">{d.travelsname}</h5>
 
-            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> 07.30<h6>16Mar </h6></h5>
+            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> {d.starttime}<h6>{d.startdate} </h6></h5>
             <hr style={{width:"50px",position:"relative",bottom:"63px",left:"480px"}}></hr>
-            <h6 style={{position:"relative",bottom:"93px",left:"560px"}}> 06hrs 1min </h6>
+            <h6 style={{position:"relative",bottom:"93px",left:"560px"}}> {d.totalhours} </h6>
             <hr style={{width:"50px",position:"relative",bottom:"117px",left:"680px"}}></hr>
-            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}> 13:40<h6>16Mar </h6></h5>
+            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}>{d.reachtime}<h6>{d.reachdate} </h6></h5>
 
-            <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}> *4.4</button>
+            <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}> {d.rating}</button>
 
-            <h5 style={{position:"relative",left:"1250px",bottom:"235px"}}>$1,000</h5>
+            <h5 style={{position:"relative",left:"1250px",bottom:"235px"}}>{d.price}</h5>
 
-            <h6 style={{position:"relative",bottom:"230px"}}>A/C Sleeper</h6>
 
-            <h6 style={{position:"relative",bottom:"240px",left:"395px"}}>chennai</h6>
+            <h6 style={{position:"relative",bottom:"230px"}}>{d.type}</h6>
 
-            <h6 style={{position:"relative",bottom:"269px",left:"750px"}}>Bangalore</h6>
+            <h6 style={{position:"relative",bottom:"240px",left:"395px"}}>{d.from}</h6>
 
-            <h6 style={{position:"relative",bottom:"265px"}}>Utilities</h6>
+            <h6 style={{position:"relative",bottom:"269px",left:"750px"}}>{d.to}</h6>
 
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="Bedsheet" style={{borderStyle:"none",background:'white',position:"relative",bottom:"300px",left:"70px"}}><img style={{height:"20px"}} src={bedsheet}></img></button>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="pillow" style={{borderStyle:"none",background:'white',position:"relative",bottom:"300px",left:"70px"}}><img style={{height:"20px"}} src={pillow}></img></button>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="light" style={{borderStyle:"none",background:'white',position:"relative",bottom:"300px",left:"70px"}}><img style={{height:"20px"}} src={light}></img></button>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="charge" style={{borderStyle:"none",background:'white',position:"relative",bottom:"300px",left:"70px"}}><img style={{height:"20px"}} src={charge}></img></button>
+            <Link to={`/singlebus/${d._id}`} ><button type="button" class="btn btn-danger" id='ticketbook' style={{position:'relative',left:"90%"}}>Book ticket</button></Link> 
+ 
 
-            <button type="button" class="btn btn-danger" id='ticketbook' >Book ticket</button>
+            <h6 style={{position:"relative",bottom:"290px"}}>Utilities</h6>
 
+            { d.utilities && <div> 
+              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={bedsheet} alt="" srcset="" />
+              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={pillow} alt="" srcset="" />
+              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={light} alt="" srcset="" />
+              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={charge} alt="" srcset="" />
+            </div> }
 
 
         </div>
         </div>
     </div>
+        )
+      })}
+    </div>
   )
+
 }
 
 export default Buslist

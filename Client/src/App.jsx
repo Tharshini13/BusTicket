@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import { authStore } from './StateManagement/auth.store';
 import BookTicket from './Components/BookTicket';
 import AddBus from './Pages/AddBus';
+import Singlebus from './Components/Singlebus';
 
 const App = () => {
     let { message, checkAuth } = authStore();
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path='/login' element={message.status ? <Home /> : <Login />} />
                     <Route path='/bookticket' element={message.status ? <BookTicket /> : <Login />} />
                     <Route path='/addbus' element={<AddBus />} />
+                    <Route path='/singlebus/:id' element={<Singlebus />}></Route>
                 </Routes>
             </BrowserRouter>
         </div>
