@@ -61,5 +61,22 @@ module.exports = {
         
 
     },
+
+    findSingleBus : async (req,res)=>{
+
+         let {id} = req.params
+
+         busdetailes.findById({_id : id})
+         .then((d)=>{
+            res.send(d)
+         })
+         .catch((e)=>{
+            res.send(e)
+         })
+         
+
+        
+
+    }
     
 }

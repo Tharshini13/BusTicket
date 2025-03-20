@@ -3,6 +3,7 @@ import axios from "axios";
 
 export let busStore = create((set) => ({
     busInfo: [], 
+    bus: null,
 
     findbus: (userData) => {
 
@@ -20,6 +21,20 @@ export let busStore = create((set) => ({
             .catch((e) => {
                 console.error(e);
             });
+    },
+
+    singleBus : (id)=>{
+
+        axios.get(`http://localhost:8000/bus/singlebus/${id}`)
+        .then((res)=>{
+            set({bus:res.data})
+            
+        })
+        .catch((e)=>{
+            alert("Error occured!")
+            
+        })
+
     }
 
     

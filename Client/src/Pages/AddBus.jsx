@@ -16,24 +16,38 @@ const AddBus = () => {
 
       <div className="container mt-5">
         <div className="row justify-content-center">
-          <div className="col-md-4 addbus1-card" style={{padding:"40px"}}  >
+          <div className="col-md-4 addbus1-card" style={{padding:"40px"}}   >
 
-              <form>
+              <form style={{paddingLeft:"20px",paddingRight:"20px"}}>
 
-                <div className="input-group mb-3" style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="From"/>
+              <div class="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>From</label>
+                <input type="text" style={{height:"35px"}} class="form-control"/>
+              </div>
+
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>To</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3" style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="To"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Date</label>
+                  <input type="date" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3" style={{padding:"5px"}}>
-                  <input type="date" className="form-control" placeholder="Date"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Starting Time</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3" style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="Travels Name"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Reaching Time</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
+                </div>
+
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Travels Name</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
               </form>
@@ -47,26 +61,47 @@ const AddBus = () => {
 
               <form>
 
-                <div className="input-group mb-3" style={{ padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="Utilities"/>
+              <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Starting Date</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3" style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="Type"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Reaching Date</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3"  style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="Price"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Total hours</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
-                <div className="input-group mb-3"  style={{padding:"5px"}}>
-                  <input type="text" className="form-control" placeholder="Rating"/>
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Type</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
+                </div>
+
+              <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Utilities</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
+                </div>
+
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Price</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
+                </div>
+
+                <div className="mb-3">
+                <label class="form-label" style={{color:"white",fontSize:"18px"}}>Rating</label>
+                  <input type="text" style={{height:"35px"}} class="form-control"/>
                 </div>
 
               </form>
+
             </div>
           </div>
         </div>
+        <button type="submit" class="btn btn-primary" style={{position:'relative',bottom:"650px",left:'45%',width:'200px'}}>Submit</button>
     </div>
   )
 }
