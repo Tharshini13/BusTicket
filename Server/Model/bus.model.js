@@ -40,6 +40,12 @@ let mongoose = require("mongoose");
     },
     "rating":{
         type:String
+    },
+    "sno":{
+        type:Number
+    },
+    "seats":{
+        type:[]
     }
 
 })

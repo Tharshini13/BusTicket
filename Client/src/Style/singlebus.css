@@ -74,3 +74,57 @@
 .form{
     padding: 30px;
 }
+
+@media (max-width: 500px) {
+
+    .sb{
+        height: 900px;
+    }
+
+    .bus-container {
+      padding: 10px;
+      position: relative;
+      left: 10px;
+      top: 30px;
+    }
+  
+    .seat-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+  
+    .seat-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+  
+    .seat_btn {
+      width: 35px;
+      height: 35px;
+      font-size: 12px;
+    }
+    
+    .login-container {
+      width: 80%;
+      height: 330px;
+      padding: 10px;
+      position: relative;
+      top: 50px;
+      left: 5px;
+    }
+  
+    .form-control {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

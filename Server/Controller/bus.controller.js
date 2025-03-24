@@ -5,30 +5,36 @@ module.exports = {
 
     addbus:(req,res)=>{
 
-        let {from,to,date,starttime,reachtime,startdate,reachdate,totalhours,travelsname,utilities,type,price} = req.body
+        let {from,to,date,starttime,reachtime,startdate,reachdate,totalhours,travelsname,utilities,type,price,seats} = req.body
+
+
+        console.log(req.body);
+        
+
+                res.send("Data Received")
 
 
        
 
 
-        busdetailes.create({from:from,to:to,date:date,starttime:starttime,startdate:startdate,reachdate:reachdate,reachtime:reachtime,totalhours:totalhours,travelsname:travelsname,utilities:utilities,type:type,price:price})
-        .then((d)=>{
+        // busdetailes.create({from:from,to:to,date:date,starttime:starttime,startdate:startdate,reachdate:reachdate,reachtime:reachtime,totalhours:totalhours,travelsname:travelsname,utilities:utilities,type:type,price:price})
+        // .then((d)=>{
 
-            res.json({
-                status:true,
-                "msg":"Bus Added Successfully!",
-                data:d
-            })
+        //     res.json({
+        //         status:true,
+        //         "msg":"Bus Added Successfully!",
+        //         data:d
+        //     })
 
-        })
-        .catch((e)=>{
+        // })
+        // .catch((e)=>{
 
-            res.json({
-                status:false,
-                "msg":e,
-                "info":"Error Occured in addbus"
-            })
-        })
+        //     res.json({
+        //         status:false,
+        //         "msg":e,
+        //         "info":"Error Occured in addbus"
+        //     })
+        // })
 
 
 

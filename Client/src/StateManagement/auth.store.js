@@ -37,4 +37,5 @@ export let authStore = create((set) => ({
             set({ user: null, message: { status: false } });
         });
     },
+    
 }));

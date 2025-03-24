@@ -28,7 +28,7 @@ body {
  .addbus1-card {
     position: relative;
     right: 280px;
-    width: 40%;
+    width: 40%; 
     bottom: 65px;
     backdrop-filter: blur(5px) saturate(150%);
    -webkit-backdrop-filter: blur(5px) saturate(150%);
@@ -55,3 +55,46 @@ body {
     position: relative;
     z-index: 10;
 }
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .addbus-card {
+      padding: 20px !important;
+      width: 100% !important;
+    }
+  
+    form {
+      padding: 10px !important;
+      bottom: 0px !important;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-md-6 {
+      width: 100% !important;
+    }
+  
+    .form-control {
+      font-size: 14px !important;
+    }
+  
+    .btn {
+      width: 100% !important;
+    }
+  
+    #addbus_bg {
+      display: none;
+    }
+  
+    #addpara {
+      font-size: 24px !important;
+      text-align: center !important;
+    }
+  }
+  

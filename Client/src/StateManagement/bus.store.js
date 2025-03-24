@@ -35,7 +35,16 @@ export let busStore = create((set) => ({
             
         })
 
-    }
+    },
+    addBus: async (busData)=>{
+                                                   
+        try {
+            const response = await axios.post("http://localhost:8000/bus/addbus", busData);
+            console.log("Bus Added Successfully", response.data);
+          } catch (error) {
+            console.error("Error adding bus", error);
+          }
 
-    
+    }
+  
 }));
