@@ -3,7 +3,7 @@ import axios from "axios";
 
 export let busStore = create((set) => ({
     busInfo: [], 
-    bus: null,
+    bus: {},
 
     findbus: (userData) => {
 

@@ -11,4 +11,6 @@ busRouter.post("/addbus", addbus)
 busRouter.post("/findbus", protectedRoute, findbus);
 busRouter.get("/singlebus/:id",findSingleBus)
 
+
+
 module.exports = busRouter;

@@ -12,12 +12,12 @@ const AddBus = () => {
     from: "",
     to: "",
     date: "",
-    startingTime: "",
-    reachingTime: "",
-    travelsName: "",
-    startingDate: "",
-    reachingDate: "",
-    totalHours: "",
+    starttime: "",
+    reachtime: "",
+    travelsname: "",
+    startdate: "",
+    reachdate: "",
+    totalhours: "",
     type: "",
     utilities: "false",
     price: "",
@@ -71,38 +71,38 @@ const AddBus = () => {
 
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Starting Time</label>
-                  <input type="time" name="startingTime" value={formData.startingTime} onChange={handleChange} className="form-control" />
+                  <input type="time" name="starttime" value={formData.starttime} onChange={handleChange} className="form-control" />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Reaching Time</label>
-                  <input type="time" name="reachingTime" value={formData.reachingTime} onChange={handleChange} className="form-control" />
+                  <input type="time" name="reachtime" value={formData.reachtime} onChange={handleChange} className="form-control" />
                 </div>
 
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Travels Name</label>
-                  <input type="text" name="travelsName" value={formData.travelsName} onChange={handleChange} className="form-control" />
+                  <input type="text" name="travelsname" value={formData.travelsname} onChange={handleChange} className="form-control" />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Starting Date</label>
-                  <input type="date" name="startingDate" value={formData.startingDate} onChange={handleChange} className="form-control" />
+                  <input type="date" name="startdate" value={formData.startdate} onChange={handleChange} className="form-control" />
                 </div>
 
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Reaching Date</label>
-                  <input type="date" name="reachingDate" value={formData.reachingDate} onChange={handleChange} className="form-control" />
+                  <input type="date" name="reachdate" value={formData.reachdate} onChange={handleChange} className="form-control" />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <label className="form-label text-white fs-5">Total Hours</label>
-                  <input type="text" name="totalHours" value={formData.totalHours} onChange={handleChange} className="form-control" />
+                  <input type="text" name="totalhours" value={formData.totalhours} onChange={handleChange} className="form-control" />
                 </div>
 
                 <div className="col-md-6 mb-3">

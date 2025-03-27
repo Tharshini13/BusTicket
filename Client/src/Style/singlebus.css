@@ -14,47 +14,13 @@
     height: 500px;
 }
 
-.deck {
-    height: 170px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #f2f2f2;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+#btn1{
+  height: 40px;
+  width: 40px;
+  border-radius: 8%;
+  margin-top: 10px;
+  margin-left: 20px;
 }
-
-.seat-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.seat-row {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.seat {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.seat_btn{
-    border-radius: 6px;
-    height: 35px;
-    width: 60px;
-}
-
 
 
 .login-container{
@@ -86,26 +52,6 @@
       position: relative;
       left: 10px;
       top: 30px;
-    }
-  
-    .seat-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-    }
-  
-    .seat-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-    }
-  
-    .seat_btn {
-      width: 35px;
-      height: 35px;
-      font-size: 12px;
     }
     
     .login-container {

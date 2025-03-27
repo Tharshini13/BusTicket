@@ -39,7 +39,7 @@ let mongoose = require("mongoose");
         type:String
     },
     "rating":{
-        type:String
+        type:Number
     },
     "sno":{
         type:Number

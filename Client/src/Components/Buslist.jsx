@@ -29,11 +29,13 @@ const Buslist = () => {
 
             <h5 class="card-title">{d.travelsname}</h5>
 
-            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> {d.starttime}<h6>{d.startdate} </h6></h5>
+            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> {d.starttime}</h5>
+            <h5 style={{position:"relative",left:"380px",bottom:"30px"}}><h6>{d.startdate} </h6></h5>
             <hr style={{width:"50px",position:"relative",bottom:"63px",left:"480px"}}></hr>
             <h6 style={{position:"relative",bottom:"93px",left:"560px"}}> {d.totalhours} </h6>
             <hr style={{width:"50px",position:"relative",bottom:"117px",left:"680px"}}></hr>
-            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}>{d.reachtime}<h6>{d.reachdate} </h6></h5>
+            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}>{d.reachtime}</h5>
+            <h5 style={{position:"relative",left:"740px",bottom:"158px"}}><h6>{d.reachdate} </h6></h5>
 
             <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}> {d.rating}</button>
 

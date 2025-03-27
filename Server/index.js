@@ -3,7 +3,8 @@ const connectDB = require("./lib/db.connect");
 const authRouter = require("./Module/auth.module");
 let cors = require("cors");
 const busRouter = require("./Module/bus.module");
-const cookieParser = require("cookie-parser")
+const cookieParser = require("cookie-parser");
+const ticketRouter = require("./Module/ticket.module");
 
 
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 
 app.use("/auth",authRouter)
 app.use("/bus",busRouter)
+app.use("/ticket" , ticketRouter)
 
 
 
