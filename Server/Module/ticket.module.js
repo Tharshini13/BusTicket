@@ -3,7 +3,7 @@ const { bookticket } = require("../Controller/ticket.controller");
 
 let ticketRouter = express.Router();
 
-ticketRouter.post("/bookticket" , bookticket)
+ticketRouter.post("/bookticket/:id" , bookticket)
 
 
 

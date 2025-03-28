@@ -1,17 +1,17 @@
 let mongoose = require("mongoose");
 
 let ticket = new mongoose.Schema({
-    "name":{
+    "username":{
         type:String
     },
     "email":{
         type:String
     },
-    "phone_number":{
+    "phonenumber":{
         type:String
     },
-    "seat":{
-        type:[]
+    "seats":{
+        type:[Number]
     }
 })
 

@@ -1,76 +1,129 @@
+.sb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F4F4F4;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+}
+
 
 .bus-container {
-    width: 80%;
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;     
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    right: 300px;
-    top:150px;
-    height: 500px;
+  width: 55%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#btn1{
-  height: 40px;
-  width: 40px;
-  border-radius: 8%;
-  margin-top: 10px;
-  margin-left: 20px;
+#h6 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  color: #333;
 }
 
 
-.login-container{
-    max-width: 500px;
-    height:400px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    left:380px;
-    bottom: 300px ;
+.seat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.form{
-    padding: 30px;
+#btn1 {
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #DFF6FF;
+  border: 2px solid #007BFF;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 500px) {
+#btn1:hover {
+  background: #007BFF;
+  color: white;
+  cursor: pointer;
+}
 
-    .sb{
-        height: 900px;
-    }
+#btn1.selected {
+  background: #007BFF;
+  color: white;
+  border: 2px solid #007BFF;
+}
 
-    .bus-container {
-      padding: 10px;
-      position: relative;
-      left: 10px;
-      top: 30px;
-    }
-    
-    .login-container {
-      width: 80%;
-      height: 330px;
-      padding: 10px;
-      position: relative;
-      top: 50px;
-      left: 5px;
-    }
-  
-    .form-control {
-      width: 100%;
-      font-size: 14px;
-    }
-  
-    .btn {
-      font-size: 14px;
-      padding: 10px;
-    }
+#btn1:disabled {
+  background: gray;
+  border: 2px solid gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+.login-container {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  padding: 40px;
+}
+
+.form-control {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.form-control:focus {
+  border: 1px solid #007BFF;
+  outline: none;
+}
+
+.btnpay {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btnpay:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 900px) {
+  .layout-container {
+      flex-direction: column;
+      align-items: center;
   }
-  
+
+  .bus-container,
+  .login-container {
+      width: 90%;
+  }
+}

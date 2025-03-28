@@ -1,74 +1,68 @@
-import React from 'react'
+
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../Style/Buslist.css"
+import "../Style/Buslist.css";
 import bedsheet from "../assets/bed-sheets.png"
 import light from "../assets/light.png"
 import pillow from "../assets/pillow.png"
 import charge from "../assets/charge.png"
-import { busStore } from "../StateManagement/bus.store"; 
-import { Link } from 'react-router-dom';
+import { busStore } from "../StateManagement/bus.store";
+import { Link } from "react-router-dom";
 
 
 const Buslist = () => {
-
-  let {findbus,busInfo} = busStore();
-
+  let { busInfo } = busStore();
   let data = busInfo?.busdata || [];
 
+  return (
+    <div className="container mt-4">
+      <div className="row">
+        {data.map((d) => (
+          <div key={d._id} className="col-md-4">
+            <div className="bus-card" style={{position:"relative",bottom:"500px",background:"#FBF8EF"}}>
+              <div className="d-flex justify-content-between align-items-center">
+                <h5 className="bus-title">{d.travelsname}</h5>
+                <span className="bus-rating">{d.rating} ★</span>
+              </div>
 
+              <div className="bus-route">
+                <div>
+                  <h6>{d.starttime}</h6>
+                  <p className="text-muted">{d.from}</p>
+                </div>
+                <div className="bus-duration">{d.totalhours} hrs</div>
+                <div>
+                  <h6>{d.reachtime}</h6>
+                  <p className="text-muted">{d.to}</p>
+                </div>
+              </div>
 
-  return(
-    <div>
-      {data.map((d)=>{
-        return(
+              <div className="bus-info">
+                <span className="bus-type">{d.type}</span>
+                <h6 className="bus-price">₹{d.price}</h6>
+              </div>
 
+              <h6 style={{position:"relative",top:"20px"}}>Utilities</h6>
 
-    <div>
-        <div class="card">
-        <div class="card-body">
+                { d.utilities && <div> 
+                  <img style={{height:"20px",position:"relative",bottom:"10px",left:'80px',paddingRight:"15px"}} src={bedsheet} alt="" srcset="" />
+                  <img style={{height:"20px",position:"relative",bottom:"10px",left:'80px',paddingRight:"15px"}} src={pillow} alt="" srcset="" />
+                  <img style={{height:"20px",position:"relative",bottom:"10px",left:'80px',paddingRight:"15px"}} src={light} alt="" srcset="" />
+                  <img style={{height:"20px",position:"relative",bottom:"10px",left:'80px',paddingRight:"15px"}} src={charge} alt="" srcset="" />
+                </div> }
 
-            <h5 class="card-title">{d.travelsname}</h5>
-
-            <h5 style={{position:"relative",left:"400px",bottom:"30px"}}> {d.starttime}</h5>
-            <h5 style={{position:"relative",left:"380px",bottom:"30px"}}><h6>{d.startdate} </h6></h5>
-            <hr style={{width:"50px",position:"relative",bottom:"63px",left:"480px"}}></hr>
-            <h6 style={{position:"relative",bottom:"93px",left:"560px"}}> {d.totalhours} </h6>
-            <hr style={{width:"50px",position:"relative",bottom:"117px",left:"680px"}}></hr>
-            <h5 style={{position:"relative",left:"760px",bottom:"158px"}}>{d.reachtime}</h5>
-            <h5 style={{position:"relative",left:"740px",bottom:"158px"}}><h6>{d.reachdate} </h6></h5>
-
-            <button type="button" class="btn btn-success" style={{position:"relative",left:"900px",bottom:"205px",height:"35px"}}> {d.rating}</button>
-
-            <h5 style={{position:"relative",left:"1250px",bottom:"235px"}}>{d.price}</h5>
-
-
-            <h6 style={{position:"relative",bottom:"230px"}}>{d.type}</h6>
-
-            <h6 style={{position:"relative",bottom:"240px",left:"395px"}}>{d.from}</h6>
-
-            <h6 style={{position:"relative",bottom:"269px",left:"750px"}}>{d.to}</h6>
-
-            <Link to={`/singlebus/${d._id}`} ><button type="button" class="btn btn-danger" id='ticketbook' style={{position:'relative',left:"90%"}}>Book ticket</button></Link> 
- 
-
-            <h6 style={{position:"relative",bottom:"290px"}}>Utilities</h6>
-
-            { d.utilities && <div> 
-              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={bedsheet} alt="" srcset="" />
-              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={pillow} alt="" srcset="" />
-              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={light} alt="" srcset="" />
-              <img style={{height:"20px",position:"relative",bottom:"320px",left:'80px',paddingRight:"15px"}} src={charge} alt="" srcset="" />
-            </div> }
-
-
-        </div>
-        </div>
+              <div className="text-end">
+                <Link to={`/singlebus/${d._id}`}>
+                  <button className="btn book-btn">Book Ticket</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-        )
-      })}
-    </div>
-  )
+  );
+};
 
-}
+export default Buslist;
 
-export default Buslist

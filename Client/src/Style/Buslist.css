@@ -1,17 +1,97 @@
-.card{
-    width: 90%;
-    position: relative;
-    bottom: 480px;
-    height: 170px;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
-}
-
-#ticketbook{
-    border-radius: 15px;
-    position:relative;
-    bottom:271px;
-    left:1073px;
-}
+/* General Card Styling */
+.bus-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Bus Title */
+  .bus-title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Bus Rating */
+  .bus-rating {
+    background: #28a745;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Route Section */
+  .bus-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .bus-route h5 {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .route-divider {
+    width: 50px;
+    height: 2px;
+    background: #007bff;
+    margin: 0 10px;
+  }
+  
+  /* Additional Info */
+  .bus-info {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .bus-type {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .bus-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #dc3545;
+  }
+  
+  /* Utilities */
+  .bus-utilities {
+    margin-top: 10px;
+  }
+  
+  .utility-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .utility-icon {
+    font-size: 22px;
+  }
+  
+  /* Book Button */
+  .book-btn {
+    background: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+    border: none;
+  }
+  
+  .book-btn:hover {
+    background: #c82333;
+  }
+  
