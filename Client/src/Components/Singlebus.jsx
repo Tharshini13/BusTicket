@@ -18,6 +18,8 @@ const Singlebus = () => {
 
   const submit = (e) => {
     e.preventDefault();
+    setLoading(true);
+  
     axios
       .post(`http://localhost:8000/ticket/bookticket/${id}`, {
         username: username,
@@ -27,11 +29,24 @@ const Singlebus = () => {
       })
       .then((res) => {
         console.log(res.data);
+  
+        // Reset form fields
+        setUsername("");
+        setemail("");
+        setPhonenumber("");
+        setSelectedSeats([]);
+  
+        // Refresh seat availability
+        singleBus(id);
       })
       .catch((e) => {
         console.log(e);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
+  
 
   useEffect(() => {
     singleBus(id);
@@ -104,13 +119,13 @@ const Singlebus = () => {
           <h3 className="text-center" style={{position:"relative",top:"20px"}}>Contact Information</h3>
           <form className="form" onSubmit={submit}>
             <div className="mb-3">
-              <input type="text" className="form-control" placeholder="Full Name" onChange={(e) => setUsername(e.target.value)} required />
+              <input type="text" className="form-control" placeholder="Full Name" onChange={(e) => setUsername(e.target.value)} value={username}  required />
             </div>
             <div className="mb-3">
-              <input type="email" className="form-control" placeholder="Email" onChange={(e) => setemail(e.target.value)} required />
+              <input type="email" className="form-control" placeholder="Email" onChange={(e) => setemail(e.target.value)} value={email} required />
             </div>
             <div className="mb-3">
-              <input type="tel" className="form-control" placeholder="Phone Number" onChange={(e) => setPhonenumber(e.target.value)} required />
+              <input type="tel" className="form-control" placeholder="Phone Number" onChange={(e) => setPhonenumber(e.target.value)} value={phonenumber} required />
             </div>
             <div className="mb-3">
               <input type="text" className="form-control" placeholder="Selected Seats" value={selectedSeats.join(", ")} readOnly />

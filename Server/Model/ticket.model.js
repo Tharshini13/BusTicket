@@ -12,6 +12,9 @@ let ticket = new mongoose.Schema({
     },
     "seats":{
         type:[Number]
+    },
+    "date":{
+        type: Date
     }
 })
 

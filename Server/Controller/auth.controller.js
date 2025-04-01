@@ -1,8 +1,7 @@
 const jwt = require("jsonwebtoken");
 const signupModel = require("../Model/signup.model");
 const generateToken = require("../lib/generateToken");
-let  bcrypt = require("bcrypt")
-
+const bcrypt = require("bcrypt");
 
 module.exports = {
     signup: async (req, res) => {

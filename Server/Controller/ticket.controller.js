@@ -1,3 +1,4 @@
+const Ticket = require("../lib/Ticket");
 const busdetailes = require("../Model/bus.model");
 const busticket = require("../Model/ticket.model");
 
@@ -34,8 +35,11 @@ module.exports = {
                 username,
                 email,
                 phonenumber,
-                seats
+                seats,
+                date: new Date()
             });
+
+            await Ticket(newTicket,bus); 
 
             return res.status(201).json({ status: true, msg: "Booking confirmed", ticket: newTicket });
         } catch (error) {
