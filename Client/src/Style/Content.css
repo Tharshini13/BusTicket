@@ -1,8 +1,6 @@
 #home_bg{
     width: 100%;
     height: 820px;
-    position: relative;
-    bottom: 10px;
 }
 
 #mainhead{
@@ -33,3 +31,409 @@
    font-size: 18px;
    font-weight: 500;
 }
+
+
+/* Container */
+.route-container {
+    background: linear-gradient(to bottom, #C4D9FF, #ffffff); /* Light blue to white */
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(11, 1, 32, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  /* Title */
+  .route-title {
+    font-size: 26px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid Layout */
+  .route-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Route Card */
+  .route-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icon */
+  .route-icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* Route Name */
+  .route-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Route Description */
+  .route-desc {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+
+  .testimonial-section {
+    background: #f9f9f9; /* Light gray background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonial-title {
+    font-size: 30px;
+    color: #007bff; /* Blue color for the title */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .testimonial-card {
+    background: #ffffff; /* White background for the card */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px); /* Hover effect for cards */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial-quote {
+    font-size: 18px;
+    color: #555; /* Dark gray text for the quote */
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-author {
+    font-size: 16px;
+    color: #007bff; /* Blue color for author name */
+    font-weight: bold;
+  }
+
+
+  .choose-us-section {
+    background: #C4D9FF; /* Light blue background for a fresh feel */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .choose-us-title {
+    font-size: 30px;
+    color: #007bff; /* Blue color for the title */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .choose-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .choose-us-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .choose-us-card:hover {
+    transform: translateY(-10px); /* Hover effect for cards */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .choose-us-icon {
+    font-size: 40px;
+    color: #007bff; /* Blue color for icons */
+    margin-bottom: 20px;
+  }
+  
+  .choose-us-feature {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .choose-us-desc {
+    font-size: 16px;
+    color: #666;
+  }
+  
+
+  .special-offers-section {
+    background: #C4D9FF; /* Light blue background for a fresh feel */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .special-offers-title {
+    font-size: 32px;
+    color: #007bff; /* Blue color for the title */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .special-offers-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .special-offer-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .special-offer-card:hover {
+    transform: translateY(-10px); /* Hover effect for cards */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .offer-text {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .offer-text strong {
+    color: #ff4500; /* Highlight discount with an orange color */
+  }
+  
+  .special-offer-card:first-child {
+    background: #fff4e6; /* Light peach background for the first offer */
+  }
+  
+  .special-offer-card:nth-child(2) {
+    background: #e6ffe6; /* Light green background for the second offer */
+  }
+  
+  
+  .faq-section {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .faq-title {
+    font-size: 32px;
+    color: #007bff; /* Blue color for the title */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .faq-summary {
+    background: #007bff; /* Blue background for the questions */
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-summary:hover {
+    background: #0056b3; /* Darker blue on hover */
+  }
+  
+  .faq-icon {
+    font-size: 20px;
+  }
+  
+  .faq-content {
+    padding: 20px;
+    font-size: 16px;
+    color: #555;
+    background: #f1f1f1; /* Light gray background for content */
+    display: none;
+  }
+  
+  details[open] .faq-content {
+    display: block;
+  }
+  
+  details[open] .faq-summary {
+    background: #0056b3; /* Darker blue when open */
+  }
+
+
+  .footer {
+    background: #222; /* Dark background for contrast */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 16px;
+    color: #aaa;
+  }
+  
+  .footer-links h4,
+  .footer-social h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #00aaff; /* Light blue on hover */
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #00aaff; /* Light blue on hover */
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+
+  
+  @media all and (max-width:500px) {
+
+    #bt{
+      display: none;
+    }
+
+    .route-grid{ 
+      position: relative;
+      right: 320px;
+      bottom: 200px;
+    }
+
+    #route{
+      position: relative;
+      left: 20px;
+    }
+
+    #route-card{
+      display: none;
+    }
+
+    .route-container{
+      display: none;
+    }
+
+
+
+
+    
+  }

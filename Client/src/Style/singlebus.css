@@ -24,6 +24,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 40px;
 }
 
 #h6 {
@@ -79,6 +81,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 40px;
 }
 
 .form {
@@ -116,6 +120,81 @@
   background: #0056b3;
 }
 
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+  color: #007BFF;
+}
+
+.footer-social h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-social img {
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+
 @media (max-width: 900px) {
   .layout-container {
       flex-direction: column;
@@ -126,4 +205,14 @@
   .login-container {
       width: 90%;
   }
+
+  .payment{
+    position: relative;
+    right: 55px;
+  }
+
+  .footer-social{
+    display: none;
+  }
+
 }

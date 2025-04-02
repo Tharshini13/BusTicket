@@ -3,6 +3,12 @@ import "../Style/Singlebus.css";
 import { busStore } from "../StateManagement/bus.store";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import insta from "../assets/instagram.png";
+import facebook from "../assets/facebook.png";
+import twitter from "../assets/twitter.png";  
+import linkedin from "../assets/linkedin.png";
+
+import Payment from "../Components/Payment.jsx"
 
 const Singlebus = () => {
   let { singleBus, bus } = busStore();
@@ -71,7 +77,7 @@ const Singlebus = () => {
 
   return (
     <div className="sb">
-      <h2 className="page-heading" style={{position:"relative",bottom:"30px"}}>Bus Seat Booking</h2>
+      <h2 className="page-heading" style={{position:"relative"}}>Bus Seat Booking</h2>
       <div className="layout-container">
 
         <div className="bus-container">
@@ -133,9 +139,45 @@ const Singlebus = () => {
             <button type="submit" className="btnpay" disabled={loading}>
               {loading ? "Processing..." : "PAY & BOOK NOW"}
             </button>
+            <div className="payment mt-3 ms-5" >
+            <Payment />
+            </div>
+           
           </form>
         </div>
+      
       </div>
+
+     
+
+      {/* Footer */}
+      <footer className="footer" style={{position: "relative",top:"100px"}}>
+        <div className="footer-top">
+          <div className="footer-logo">
+            <h3>BlueSky Travels</h3>
+            <p>Your journey begins here.</p>
+          </div>
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div className="footer-social">
+            <h4>Follow Us</h4>
+            <img id="insta" src={insta} style={{height: '30px', position: "relative", top: "35px", right: "150px"}} alt="Instagram" />
+            <img src={facebook} style={{height: '30px', position: "relative", top: "35px", right: "150px"}} alt="Facebook" />
+            <img id="twitter" src={twitter} style={{height: '30px', position: "relative", top: "35px", right: "150px"}} alt="Twitter" />
+            <img src={linkedin} style={{height: '30px', position: "relative", top: "35px", right: "150px"}} alt="LinkedIn" />
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p style={{position: "relative", right: "40px"}}>&copy; 2025 BlueSky Travels. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };

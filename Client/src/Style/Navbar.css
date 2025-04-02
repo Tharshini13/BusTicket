@@ -55,29 +55,49 @@
     color: white;
 }
 
+@media all and (max-width:500px) {
 
+    #head{
+        position: relative;
+        left: 50px;
+    }
 
+    #btn{
+        display: none;
+    }
 
+    #btnhome{
+        position: relative;
+        right: 260px;
+        width: 20px;
+    }
 
-
-@media all and (max-width:500px){
+    .link .btn:hover{
+        cursor: pointer;
+        color: black;
+        background-color: white;
+    }
 
     #Nav{
         display: none;
     }
 
+    
 }
-
 
 @media all and (min-width:500px) {
     
-    #navM{
+    .navM{
         display: none;
     }
 
 
 
 }
+
+
+
+
 
 
 

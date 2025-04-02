@@ -10,7 +10,7 @@ export let authStore = create((set) => ({
             .post("http://localhost:8000/auth/signin", { email, password }, { withCredentials: true })
             .then((res) => {
                 set({ message: res.data, user: res.data.user });
-                authStore.getState().checkAuth(); // Refresh authentication status
+                authStore.getState().checkAuth(); 
             })
             .catch((e) => {
                 console.log(e);
@@ -32,7 +32,7 @@ export let authStore = create((set) => ({
         axios.post("http://localhost:8000/auth/logout", {}, { withCredentials: true })
             .then(() => {
                 set({ user: null, message: { status: false } });
-                authStore.getState().checkAuth(); // Refresh authentication status
+                authStore.getState().checkAuth();
                 window.location.href = "/home";
             })
             .catch((e) => console.log("Logout failed", e));

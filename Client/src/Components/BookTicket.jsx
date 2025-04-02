@@ -4,6 +4,10 @@ import "../Style/BookTicket.css"
 import ticket from "../assets/login_bg.jpg"
 import { busStore } from '../StateManagement/bus.store'
 import Buslist from './Buslist'
+import insta from "../assets/instagram.png";
+import facebook from "../assets/facebook.png";
+import twitter from "../assets/twitter.png";
+import linkedin from "../assets/linkedin.png"
 
 const BookTicket = () => {
 
@@ -55,7 +59,36 @@ let findBus = ()=>{
         <button className='search' onClick={findBus}>Search</button>
 
         <Buslist/>
+
+        <footer className="footer" style={{position:"relative",bottom:"425px"}}>
+          <div className="footer-top">
+            <div className="footer-logo">
+              <h3>BlueSky Travels</h3>
+              <p>Your journey begins here.</p>
+            </div>
+            <div className="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div className="footer-social">
+              <h4>Follow Us</h4>
+              <img src={insta} style={{height:'30px',position:"relative",top:"35px",right:"150px"}}></img>
+              <img src={facebook} style={{height:'30px',position:"relative",top:"35px",right:"150px"}}></img>
+              <img src={twitter} style={{height:'30px',position:"relative",top:"35px",right:"150px"}}></img>
+              <img src={linkedin} style={{height:'30px',position:"relative",top:"35px",right:"150px"}}></img>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p style={{position:"relative",right:"40px"}}>&copy; 2025 BlueSky Travels. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
+      
 
   )
 }
