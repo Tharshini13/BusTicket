@@ -9,6 +9,7 @@ import twitter from "../assets/twitter.png";
 import linkedin from "../assets/linkedin.png";
 
 import Payment from "../Components/Payment.jsx"
+import { apiEndpoint } from "../Data.js";
 
 const Singlebus = () => {
   let { singleBus, bus } = busStore();
@@ -27,7 +28,7 @@ const Singlebus = () => {
     setLoading(true);
   
     axios
-      .post(`http://localhost:8000/ticket/bookticket/${id}`, {
+      .post(`${apiEndpoint}/ticket/bookticket/${id}`, {
         username: username,
         email: email,
         phonenumber: phonenumber,

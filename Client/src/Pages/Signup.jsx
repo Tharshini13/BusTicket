@@ -8,13 +8,17 @@ import person from "../assets/person.png";
 import mail from "../assets/mail.png";
 import { Link } from "react-router-dom";
 import logo from "../assets/download.png"
+import { apiEndpoint } from "../Data";
+import { authStore } from "../StateManagement/auth.store";
 
 
 const Signup = () => {
+
+let {signupHandler,signupMsg} = authStore();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => {
@@ -22,21 +26,17 @@ const Signup = () => {
   };
 
   const Submit = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:8000/auth/signup", {
-        username: username,
-        password: password,
-        email: email,
-      })
-      .then((res) => {
-        console.log(res.data);
-        setMsg(res.data);
-      })
-      .catch((e) => {
-        console.log(e);
-        setMsg(e.response?.data || "An error occurred");
-      });
+    
+
+let signupData = {
+username,
+password,
+email
+
+}
+
+    signupHandler(signupData)
+ 
   };
 
   return (
@@ -47,7 +47,7 @@ const Signup = () => {
         <div className="row justify-content-center">
           <div className="col-md-4 signup-card" style={{padding:"40px"}}  >
 
-              <small className="text-center text-danger"><i>{msg}</i></small>
+              <small className="text-center text-danger"><i>{signupMsg && "Account Created"}</i></small>
 
               <h2 className="text-center mb-2" style={{color:"white"}} >Sign Up</h2>
 

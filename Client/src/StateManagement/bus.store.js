@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+import { apiEndpoint } from "../Data";
 
 export let busStore = create((set) => ({
     busInfo: [], 
@@ -9,7 +10,7 @@ export let busStore = create((set) => ({
 
         console.log(userData)
 
-        axios.post("http://localhost:8000/bus/findbus", userData, { withCredentials: true })
+        axios.post(`${apiEndpoint}/bus/findbus`, userData, { withCredentials: true })
 
             .then((res) => {
 
@@ -25,7 +26,7 @@ export let busStore = create((set) => ({
 
     singleBus : (id)=>{
 
-        axios.get(`http://localhost:8000/bus/singlebus/${id}`)
+        axios.get(`${apiEndpoint}/bus/singlebus/${id}`)
         .then((res)=>{
             set({bus:res.data})
             
@@ -39,7 +40,7 @@ export let busStore = create((set) => ({
     addBus: async (busData)=>{
                                                    
         try {
-            const response = await axios.post("http://localhost:8000/bus/addbus", busData);
+            const response = await axios.post(`${apiEndpoint}/bus/addbus`, busData);
             console.log("Bus Added Successfully", response.data);
           } catch (error) {
             console.error("Error adding bus", error);
